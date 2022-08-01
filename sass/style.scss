@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(26, 32, 44);
+  font-family: "Segoe UI", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+i {
+  visibility: hidden;
+
+  &.descending {
+    visibility: visible;
+  }
+  &.ascending {
+    visibility: visible;
+    transform: rotate(180deg);
+  }
+}
+
+table {
+  background: #fff;
+  margin: 36px auto;
+  border-radius: 4px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 8px 16px;
+}
+
+td {
+  border: 1px solid #e2e8f0;
+}
+
+tr:nth-child(2) {
+  background-color: #f3f3f3;
+}
