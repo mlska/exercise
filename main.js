@@ -39,7 +39,7 @@ function handleSort() {
       break;
 
     default:
-      console.warn("Error in sorting");
+      console.warn("Wrong type of sorting method");
   }
 
   rows.forEach((row) => tbody.appendChild(row));
@@ -57,12 +57,12 @@ function convertToISOTime(time) {
   const date = new Date(null);
   date.setSeconds(seconds);
 
-  const t = date.toISOString();
+  const timeString = date.toISOString();
 
-  startIndex = t.indexOf("T") + 1;
-  endIndex = t.indexOf("Z") - 4;
+  startIndex = timeString.indexOf("T") + 1;
+  endIndex = timeString.indexOf("Z") - 4;
 
-  const formattedTime = t.slice(startIndex, endIndex);
+  const formattedTime = timeString.slice(startIndex, endIndex);
 
   return formattedTime;
 }
